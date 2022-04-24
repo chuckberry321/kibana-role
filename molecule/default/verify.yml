@@ -1,0 +1,16 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: Example assertion
+    assert:
+      that: true
+  - name: Verify kibana log
+    stat:
+      path: /var/log/kibana.log
+  - name: Verify kibana web
+    uri:
+      url: "http://localhost:5601"

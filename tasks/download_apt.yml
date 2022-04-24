@@ -2,7 +2,7 @@
 - name: "Download Kibana's deb"
   get_url:
     url: "https://mirrors.huaweicloud.com/kibana/{{ kibana_version }}/kibana-{{ kibana_version }}-amd64.deb"
-    dest: "files/elasticsearch-{{ kibana_version }}-amd64.deb"
+    dest: "files/kibana-{{ kibana_version }}-amd64.deb"
     validate_certs: false
   delegate_to: localhost
   register: download_kibana
